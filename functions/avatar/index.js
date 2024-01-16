@@ -48,6 +48,7 @@ async function handler(event, context) {
         "x-error-message": error.message
       },
       body: img,
+      isBase64Encoded: false,
     };
   }
 }
