@@ -42,10 +42,10 @@ async function handler(event, context) {
       // HOWEVER a 200 means that if it times out on the first attempt it will stay the default image until the next build.
       statusCode: 200,
       headers: {
-        "content-type": "image/svg+xml",
+        "content-type": "image/png",
         "x-error-message": error.message
       },
-      body: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="${IMAGE_WIDTH}" height="${IMAGE_HEIGHT}" aria-hidden="true" focusable="false"></svg>`,
+      body: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGpJREFUWEftlUEOABAMBPX/jyaujWg3QSMZV2zXqGWteFhx/YYBCEAgQ6C7pxrtkdZHYrO2JKiux0CGwNW0xgAEIPAFAR/Fai5sD5khgIHnBNTvN+qJrd6qBzBQTiC606PzmRw4WtCLYWAA4goUIYfY4WEAAAAASUVORK5CYII=`,
       isBase64Encoded: false,
     };
   }
