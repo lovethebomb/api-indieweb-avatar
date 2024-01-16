@@ -47,8 +47,8 @@ async function handler(event, context) {
         "content-length": img.length,
         "x-error-message": error.message
       },
-      body: img,
-      isBase64Encoded: false,
+      body: img.toString("base64"),
+      isBase64Encoded: true,
     };
   }
 }
